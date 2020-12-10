@@ -12,12 +12,12 @@ class ChipDesc extends Component {
   createEl() {
     const root = super.createEl('div', {
       //   textContent: "121212",
-      className: 'vjs-viu-tools-info-chip-desc-span',
+      className: 'vjs-viu-player-info-chip-desc-span',
       dir: 'ltr'
     });
     const text = dom.createEl('span', {
       textContent: this.options_.chipDesc || '',
-      className: `vjs-viu-tools-info-chip-desc ${super.buildCSSClass()}`,
+      className: `vjs-viu-player-info-chip-desc ${super.buildCSSClass()}`,
       dir: 'ltr'
     });
 

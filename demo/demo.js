@@ -4,7 +4,7 @@
     {
       preload: "auto",
       autoplay: true,
-      fluid: true,
+      fluid: false,
       inactivityTimeout: 0, // 非用户活跃时间间隔,在keydown事件控制非用户活跃
       errorDisplay: true,
       controlBar: false,

@@ -44,7 +44,7 @@ class LangList extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-lang-items',
+      className: 'vjs-viu-player-lang-items',
       dir: 'ltr'
     });
     const languages = this.options_.languages;
@@ -60,7 +60,7 @@ class LangList extends Component {
       const isDefault = parseInt(languages[i].isDefault, 10) === 1;
       const text = dom.createEl('li', {
         textContent: languages[i].name || '',
-        className: `vjs-viu-tools-lang-title vjs-viu-tools-lang-li ${
+        className: `vjs-viu-player-lang-title vjs-viu-player-lang-li ${
           isDefault ? 'lang-active' : ''
         } ${super.buildCSSClass()}`,
         dir: 'ltr'
@@ -74,7 +74,7 @@ class LangList extends Component {
     }
     const switchText = dom.createEl('li', {
       textContent: this.localize('hide_sub'),
-      className: `vjs-viu-tools-lang-title vjs-viu-tools-lang-li ${super.buildCSSClass()}`,
+      className: `vjs-viu-player-lang-title vjs-viu-player-lang-li ${super.buildCSSClass()}`,
       dir: 'ltr'
     });
 
@@ -111,7 +111,7 @@ class LangList extends Component {
       const isDefault = parseInt(languages[i].isDefault, 10) === 1;
       const text = dom.createEl('li', {
         textContent: languages[i].name || '',
-        className: `vjs-viu-tools-lang-title vjs-viu-tools-lang-li ${
+        className: `vjs-viu-player-lang-title vjs-viu-player-lang-li ${
           isDefault ? 'lang-active' : ''
         }}`,
         dir: 'ltr'
@@ -151,7 +151,7 @@ class LangList extends Component {
    */
   setComponentSelected(step) {
     // const totalStep = parseInt(this.options.languages.length, 10);
-    const items = dom.$$('.vjs-viu-tools-lang-li');
+    const items = dom.$$('.vjs-viu-player-lang-li');
 
     if (items) {
       for (let i = 0; i < items.length; i++) {

@@ -21,7 +21,7 @@ class ChipOfflineTime extends Component {
   createEl() {
     const root = super.createEl('div', {
       //   textContent: "121212",
-      className: 'vjs-viu-tools-info-offline-time-span',
+      className: 'vjs-viu-player-info-offline-time-span',
       dir: 'ltr'
     });
     const date = this.options_.offlineTime ?
@@ -29,7 +29,7 @@ class ChipOfflineTime extends Component {
       '';
     const text = dom.createEl('span', {
       textContent: date,
-      className: `vjs-viu-tools-info-offline-time ${super.buildCSSClass()}`,
+      className: `vjs-viu-player-info-offline-time ${super.buildCSSClass()}`,
       dir: 'ltr'
     });
 

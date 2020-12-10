@@ -52,7 +52,7 @@ QUnit.test('registers itself with video.js', function(assert) {
   this.clock.tick(1);
 
   assert.ok(
-    this.player.hasClass('vjs-viu-tools'),
+    this.player.hasClass('vjs-viu-player'),
     'the plugin adds a class to the player'
   );
 });

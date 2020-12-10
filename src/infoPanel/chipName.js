@@ -19,12 +19,12 @@ class ChipName extends Component {
   createEl() {
     const root = super.createEl('div', {
       //   textContent: "121212",
-      className: 'vjs-viu-tools-info-chipName-span',
+      className: 'vjs-viu-player-info-chipName-span',
       dir: 'ltr'
     });
     const text = dom.createEl('span', {
       textContent: this.options_.chipCaptions || '',
-      className: `vjs-viu-tools-info-chip-name ${super.buildCSSClass()}`,
+      className: `vjs-viu-player-info-chip-name ${super.buildCSSClass()}`,
       dir: 'ltr'
     });
 

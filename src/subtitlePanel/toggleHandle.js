@@ -18,7 +18,7 @@ class ToggleHandle extends Component {
   }
   createEl() {
     const wrap = super.createEl('div', {
-      className: 'vjs-viu-tools-lang-itembox',
+      className: 'vjs-viu-player-lang-itembox',
       dir: 'ltr'
     });
 

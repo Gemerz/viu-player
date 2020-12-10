@@ -1,9 +1,34 @@
 @font-face {
-    font-family: 'viufont';
-    src: url('fonts/iconfont.eot');
-    src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/iconfont.woff2') format('woff2'),
-        url('fonts/iconfont.woff') format('woff'),
-        url('fonts/iconfont.ttf') format('truetype'),
-        url('fonts/iconfont.svg#viufont') format('svg');
-  }
+  font-family: "viufont"; /* project id 1470295 */
+  src: url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.eot");
+  src: url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.woff") format("woff"),
+    url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.svg#viufont") format("svg");
+}
+
+.video-js.viu-player {
+  width: 100vw;
+  height: 100vh;
+}
+.video-js.viu-player .hidden {
+  display: none !important;
+}
+
+.vjs-viu-player-panel {
+  position: absolute;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: row;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: initial;
+  height: 450px;
+  width: 100%;
+  padding: 0 55px;
+}
+.vjs-viu-player-drawer {
+}

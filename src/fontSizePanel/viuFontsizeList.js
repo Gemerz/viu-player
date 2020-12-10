@@ -50,20 +50,20 @@ class ViuFontSizeList extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-lang-items',
+      className: 'vjs-viu-player-lang-items',
       dir: 'ltr'
     });
     const fontList = this.options_.fontSize || [];
 
     const fontSizeWrapper = super.createEl('ui', {
-      className: 'vjs-viu-tools-fontsize-list',
+      className: 'vjs-viu-player-fontsize-list',
       dir: 'ltr'
     });
 
     fontList.map((item) => {
       const sigleItem = dom.createEl('li', {
         textContent: this.localize(`fontsize_${item}`),
-        className: `vjs-viu-tools-fontsize-item ${
+        className: `vjs-viu-player-fontsize-item ${
           this.options_.defaultFontSize === item ? 'fs-active' : ''
         } ${super.buildCSSClass()}`,
         dir: 'ltr'
@@ -121,7 +121,7 @@ class ViuFontSizeList extends Component {
    * 更新主区选择状态处理器
    */
   setComponentSelected(step) {
-    const items = dom.$$('.vjs-viu-tools-fontsize-item');
+    const items = dom.$$('.vjs-viu-player-fontsize-item');
 
     if (items) {
       for (let i = 0; i < items.length; i++) {

@@ -15,7 +15,7 @@ QUnit.test('the environment is sane', function(assert) {
   assert.strictEqual(typeof plugin, 'function', 'plugin is a function');
 });
 
-QUnit.module('videojs-viu-tools', {
+QUnit.module('viu-player', {
 
   beforeEach() {
 
@@ -43,7 +43,7 @@ QUnit.test('registers itself with video.js', function(assert) {
   assert.strictEqual(
     typeof Player.prototype.ViuPlayer,
     'function',
-    'videojs-viu-tools plugin was registered'
+    'viu-player plugin was registered'
   );
 
   this.player.ViuPlayer();

@@ -111,8 +111,8 @@ class ViuPlayer extends Plugin {
         this.player.getChild('ViuPlayerComponent').viuInfo,
         this.player.getChild('ViuPlayerComponent').viuSubtitle,
         this.player.getChild('ViuPlayerComponent').viuAdvance,
-        this.player.getChild('ViuPlayerComponent').viuTopSubtitle
-        // this.player.getChild("ViuPlayerComponent").viuFontSize,
+        this.player.getChild('ViuPlayerComponent').viuTopSubtitle,
+        this.player.getChild("ViuPlayerComponent").viuFontSize,
       ];
       // 处理鼠标点击控制失效问题
 
@@ -732,8 +732,8 @@ ViuPlayerComponent.prototype.options_ = {
     'viuInfo',
     'viuSubtitle',
     'viuAdvance',
-    'viuTopSubtitle'
-    // "viuFontSize",
+    'viuTopSubtitle',
+    "viuFontSize",
   ]
 };
 

@@ -3,14 +3,13 @@
     "videojs-viu-tools-player",
     {
       preload: "auto",
-      autoplay: false,
+      autoplay: true,
       fluid: true,
-      inactivityTimeout: 0, // 非用户活跃时间间隔,在keydow事件控制非用户活跃
+      inactivityTimeout: 0, // 非用户活跃时间间隔,在keydown事件控制非用户活跃
       errorDisplay: true,
       controlBar: false,
       loop: true,
       muted: true,
-
       html5: {
         hls: {
           overrideNative: true,
@@ -77,9 +76,9 @@
     fontSize: ["s", "m", "l", "xl"],
     defaultFontSize: "s",
     info: {
-      chipName: "xxxxxxkxkxkxkxkxkkxkx",
+      chipName: "一些不错的剧集啦！！！",
       episode: "12",
-      chipCaptions: "日暮草莓jsajjs",
+      chipCaptions: "这里是集剧的描述！！！",
       chipDesc: "xxx",
       offlineTime: "1595843212",
       offlineTimeFormat: "YYYY-MM-DD",

@@ -58,7 +58,7 @@ class ViuSubtitlePanel extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-player-subtitle-drawer',
+      className: 'vjs-viu-player-drawer vjs-viu-player-subtitle-drawer',
       dir: 'ltr'
     });
 

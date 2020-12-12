@@ -4,6 +4,7 @@
   "description": "viu LG/SamsungTV video player",
   "main": "dist/viu-player.js",
   "module": "dist/viu-player.js",
+  "homepage": "git@github.com:Gemerz/viu-player.git",
   "generator-videojs-plugin": {
     "version": "7.6.3"
   },
@@ -37,7 +38,9 @@
     "watch": "npm-run-all -p watch:*",
     "watch:css": "npm run build:css -- -w",
     "watch:js": "npm run build:js -- -w",
-    "prepublishOnly": "npm-run-all build test:verify"
+    "prepublishOnly": "npm-run-all build test:verify",
+    "deploy": "gh-pages -d ."
+    }
   },
   "engines": {
     "node": ">=8",
@@ -88,6 +91,7 @@
   },
   "devDependencies": {
     "@videojs/generator-helpers": "~1.0.0",
+    "gh-pages": "^3.1.0",
     "jsdoc": "BrandonOCasey/jsdoc#feat/plugin-from-cli",
     "karma": "^4.0.0",
     "postcss-cli": "^6.0.0",

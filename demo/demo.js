@@ -32,6 +32,7 @@
           fontsize_s: "小",
           fontsize_m: "正常",
           fontsize_l: "大",
+          fontsize_xl:"超大",
           resolution_hero_title: "高级设置",
           cdn_title:"CDN线路",
           res_s1080p:"超清10M",
@@ -41,6 +42,7 @@
           res_url:"Amazon",
           res_url2:"PCCW HKT",
           res_url3:"AKimai",
+
         },
         en: {
           hide_sub: "Close",

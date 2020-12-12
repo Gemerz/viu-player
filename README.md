@@ -1,4 +1,4 @@
-# videojs-viu-tools
+# viu-player
 
 ## Table of Contents
 
@@ -34,7 +34,7 @@ npm install --save viu-player
 
 ## Usage
 
-To include videojs-viu-tools on your website or web application, use any of the following methods.
+To include viu-player on your website or web application, use any of the following methods.
 
 ### `<script>` Tag
 
@@ -42,17 +42,17 @@ This is the simplest case. Get the script in whatever way you prefer and include
 
 ```html
 <script src="//path/to/video.min.js"></script>
-<script src="//path/to/videojs-viu-tools.min.js"></script>
+<script src="//path/to/viu-player.min.js"></script>
 <script>
   var player = videojs("my-video");
 
-  player.viuTools();
+  player.ViuPlayer();
 </script>
 ```
 
 ### Browserify/CommonJS
 
-When using with Browserify, install videojs-viu-tools via npm and `require` the plugin as you would any other module.
+When using with Browserify, install viu-player via npm and `require` the plugin as you would any other module.
 
 ```js
 var videojs = require("video.js");
@@ -60,11 +60,11 @@ var videojs = require("video.js");
 // The actual plugin function is exported by this module, but it is also
 // attached to the `Player.prototype`; so, there is no need to assign it
 // to a variable.
-require("videojs-viu-tools");
+require("viu-player");
 
 var player = videojs("my-video");
 
-player.viuTools();
+player.ViuPlayer();
 ```
 
 ### RequireJS/AMD
@@ -72,10 +72,10 @@ player.viuTools();
 When using with RequireJS (or another AMD library), get the script in whatever way you prefer and `require` the plugin as you normally would:
 
 ```js
-require(["video.js", "videojs-viu-tools"], function(videojs) {
+require(["video.js", "viu-player"], function(videojs) {
   var player = videojs("my-video");
 
-  player.viuTools();
+  player.ViuPlayer();
 });
 ```
 
@@ -90,14 +90,14 @@ player.on("subtitleClick", function(event,langData) {
   //data :string langData
 });
 
-player..viuTools().loadNewLangListOptions(langData);
+player.ViuPlayer().loadNewLangListOptions(langData);
 ```
 
 ### 下一集播放器事件
 
 ```js
  //主动方法
-player.viuTools()toggleNextChip();
+player.ViuPlayer()toggleNextChip();
 
 player.on("nextChip", function() {
   //
@@ -108,9 +108,9 @@ player.on("nextChip", function() {
 
 ```js
    //隐藏方法
-   player.viuTools().hideTopSubtitle();   
+   player.ViuPlayer().hideTopSubtitle();   
    // 打开方法
-   player.viuTools().showTopSubtitle();
+   player.ViuPlayer().showTopSubtitle();
    player.on("toggleTopSubtitle", function(event, switcher) {
       console.log("收到双字幕开关", switcher);
   })
@@ -118,13 +118,13 @@ player.on("nextChip", function() {
 
 ### 获取进条度是否可以快进快退
 ```js
-   player.viuTools().checkVideoProcessed();
+   player.ViuPlayer().checkVideoProcessed();
 
 ```
 
 ### 主动触发信息按键
 ```js
-   player.viuTools().toggleInfo();
+   player.ViuPlayer().toggleInfo();
 
 ```
 

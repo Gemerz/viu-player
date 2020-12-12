@@ -32,7 +32,9 @@ class ChipOfflineTime extends Component {
       dir: 'ltr'
     });
 
-    root.appendChild(text);
+    if (this.options_.offlineTime) {
+      root.appendChild(text);
+    }
 
     return root;
   }

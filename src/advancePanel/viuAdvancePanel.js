@@ -17,7 +17,7 @@ class ViuAdvancePanelContainer extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-drawer-container vjs-viu-tools-advance-drawer-container',
+      className: 'vjs-viu-player-drawer-container vjs-viu-player-advance-drawer-container',
       dir: 'ltr'
     });
 
@@ -39,7 +39,7 @@ class ViuAdvancePanel extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-drawer vjs-viu-tools-advance-drawer ',
+      className: 'vjs-viu-player-drawer vjs-viu-player-advance-drawer ',
       dir: 'ltr'
     });
 

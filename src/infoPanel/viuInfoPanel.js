@@ -22,7 +22,7 @@ class ViuInfoPanelContainer extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-drawer-container vjs-viu-tools-info-drawer-container',
+      className: 'vjs-viu-player-drawer-container vjs-viu-player-info-drawer-container',
       dir: 'ltr'
     });
 
@@ -38,7 +38,7 @@ class ViuInfoPanel extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-drawer vjs-viu-tools-info-drawer',
+      className: 'vjs-viu-player-drawer vjs-viu-player-info-drawer',
       dir: 'ltr'
     });
 

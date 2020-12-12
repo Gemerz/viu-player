@@ -1,9 +1,9 @@
 {
-  "name": "@viu/videojs-viu-tools",
+  "name": "viu-player",
   "version": "0.4.2",
-  "description": "viu LG/SamsungTV video Collection tools",
-  "main": "dist/videojs-viu-tools.js",
-  "module": "dist/videojs-viu-tools.js",
+  "description": "viu LG/SamsungTV video player",
+  "main": "dist/viu-player.js",
+  "module": "dist/viu-player.js",
   "generator-videojs-plugin": {
     "version": "7.6.3"
   },
@@ -14,7 +14,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "npm-run-all -p build:*",
-    "build:css": "postcss -o dist/videojs-viu-tools.css --config scripts/postcss.config.js src/plugin.css",
+    "build:css": "postcss -o dist/viu-player.css --config scripts/postcss.config.js src/plugin.css",
     "build:js": "rollup -c scripts/rollup.config.js",
     "build:lang": "vjslang --dir dist/lang",
     "clean": "shx rm -rf ./dist ./test/dist",
@@ -92,6 +92,7 @@
     "karma": "^4.0.0",
     "postcss-cli": "^6.0.0",
     "rollup": "^1.10.0",
+    "rollup-plugin-copy": "^3.3.0",
     "sinon": "^7.2.2",
     "videojs-generate-karma-config": "~5.2.0",
     "videojs-generate-postcss-config": "~2.1.0",

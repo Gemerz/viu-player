@@ -10,7 +10,8 @@ video,
 .viu-player .hidden {
   display: none !important;
 }
-.vjs-viu-tools-fontsize-drawer {
+
+/* .vjs-viu-player-fontsize-drawer {
   width: 640px;
   height: 100%;
   position: absolute;
@@ -20,22 +21,21 @@ video,
   box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.36);
   z-index: 11;
 }
-.vjs-viu-tools-fontsize-drawer .vjs-viu-tools-fontsize-drawer-container {
+.vjs-viu-player-fontsize-drawer .vjs-viu-player-fontsize-drawer-container {
   height: 100%;
   overflow: auto;
 }
-.vjs-viu-tools-fontsize-drawer-container::-webkit-scrollbar {
+.vjs-viu-player-fontsize-drawer-container::-webkit-scrollbar {
   width: 5px;
   height: 200px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
 }
-.vjs-viu-tools-fontsize-drawer-container::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
+.vjs-viu-player-fontsize-drawer-container::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.5);
 }
-.vjs-viu-tools-fontsize-drawer.active {
+.vjs-viu-player-fontsize-drawer.active {
   right: 0;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
@@ -43,15 +43,15 @@ video,
   animation-fill-mode: both;
   -webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
-  /* padding: 90px 30px 108px 60px; */
+  padding: 90px 30px 108px 60px;
 }
-.vjs-viu-tools-fontsize-drawer .vjs-viu-tools-size-title-span {
+.vjs-viu-player-fontsize-drawer .vjs-viu-player-size-title-span {
   padding: 95px 0 63px 78px;
   font-size: 50px;
   letter-spacing: 1px;
   text-shadow: 2px 2px 4px #000;
 }
-.vjs-viu-tools-fontsize-drawer .vjs-viu-tools-lang-items li {
+.vjs-viu-player-fontsize-drawer .vjs-viu-player-lang-items li {
   width: 100%;
   height: 92px;
   line-height: 92px;
@@ -60,49 +60,40 @@ video,
   padding-left: 78px;
 }
 
-.vjs-fontsize-drawer-open .vjs-viu-tools-panel {
+.vjs-fontsize-drawer-open .vjs-viu-player-panel {
   display: none !important;
 }
 
-/*
-公共类：vjs-viu-tools-list
-*/
-.vjs-viu-tools-list-container{
-  
+.vjs-viu-player-list-container {
 }
-.vjs-viu-tools-list{
+.vjs-viu-player-list {
   list-style: none;
   text-decoration: none;
 }
-.vjs-viu-tools-list .vjs-viu-tools-list-item {
+.vjs-viu-player-list .vjs-viu-player-list-item {
   font-size: 48px;
   line-height: 96px;
 }
-.vjs-viu-tools-list-item.active{
+.vjs-viu-player-list-item.active {
   background: #ffbf00;
 }
 
-
-
-/*spc*/
-
-.vjs-viu-tools-fontsize-list {
+.vjs-viu-player-fontsize-list {
   list-style: none;
   text-decoration: none;
 }
-.vjs-viu-tools-fontsize-list .vjs-viu-tools-fontsize-item {
+.vjs-viu-player-fontsize-list .vjs-viu-player-fontsize-item {
   font-size: 48px;
   line-height: 96px;
 }
-.vjs-viu-tools-fontsize-list .vjs-viu-tools-fontsize-item.fs-active {
+.vjs-viu-player-fontsize-list .vjs-viu-player-fontsize-item.fs-active {
   background: #ffbf00;
 }
-.vjs-viu-tools-info-offline-time {
+.vjs-viu-player-info-offline-time {
   font-size: 40px;
 }
 
-/*vjs-viu-tools-advance-drawer */
-.vjs-viu-tools-advance-drawer {
+.vjs-viu-player-advance-drawer {
   width: 640px;
   height: 100%;
   position: absolute;
@@ -112,12 +103,12 @@ video,
   box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.36);
   z-index: 11;
 }
-.vjs-viu-tools-advance-drawer .vjs-viu-tools-advance-drawer-container {
+.vjs-viu-player-advance-drawer .vjs-viu-player-advance-drawer-container {
   height: 100%;
   overflow: auto;
 }
 
-.vjs-viu-tools-advance-drawer.active {
+.vjs-viu-player-advance-drawer.active {
   right: 0;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
@@ -125,22 +116,21 @@ video,
   animation-fill-mode: both;
   -webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
-  /* padding: 90px 30px 108px 60px; */
 }
-.vjs-advance-drawer-open .vjs-viu-tools-panel {
+
+.vjs-advance-drawer-open .vjs-viu-player-panel {
   display: none !important;
 }
 
-.vjs-viu-tools-list-title{
+.vjs-viu-player-list-title {
   font-size: 68px;
   padding: 30px 20px;
 }
 
-
-.vjs-viu-tools-advance-drawer .vjs-viu-res-item.selected-active{
+.vjs-viu-player-advance-drawer .vjs-viu-res-item.selected-active {
   color: #ffbf00;
 }
 
-.vjs-viu-tools-advance-drawer .vjs-viu-res-item.active{
+.vjs-viu-player-advance-drawer .vjs-viu-res-item.active {
   color: #fff !important;
-}
+} */

@@ -18,7 +18,7 @@ class ViuFontSizePanelContainer extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-drawer-container vjs-viu-tools-fontsize-drawer-container',
+      className: 'vjs-viu-player-drawer-container vjs-viu-player-fontsize-drawer-container',
       dir: 'ltr'
     });
 
@@ -33,7 +33,7 @@ class ViuFontSizePanel extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-drawer vjs-viu-tools-fontsize-drawer',
+      className: 'vjs-viu-player-drawer vjs-viu-player-fontsize-drawer',
       dir: 'ltr'
     });
 

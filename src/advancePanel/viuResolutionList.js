@@ -68,29 +68,29 @@ class ViuResolutionList extends Component {
   createEl() {
     const heroTitle = super.createEl('div', {
       textContent: this.localize('resolution_hero_title'),
-      className: 'vjs-viu-tools-list-title',
+      className: 'vjs-viu-player-list-title',
       dir: 'ltr'
     });
     const resTitle = super.createEl('div', {
       textContent: this.localize('resolution_title'),
-      className: 'vjs-viu-tools-list-sub-title res-sub-title',
+      className: 'vjs-viu-player-list-sub-title res-sub-title',
       dir: 'ltr'
     });
     const root = super.createEl('div', {
-      className: 'vjs-viu-tools-list-container',
+      className: 'vjs-viu-player-list-container',
       dir: 'ltr'
     });
     const resolutionList = this.options_.advance.resolutionList || [];
 
     const resolutionWrapper = super.createEl('ui', {
-      className: 'vjs-viu-tools-list',
+      className: 'vjs-viu-player-list',
       dir: 'ltr'
     });
 
     resolutionList.map((item) => {
       const sigleItem = dom.createEl('li', {
         textContent: this.localize(`res_${item}`),
-        className: `vjs-viu-tools-list-item vjs-viu-res-item ${
+        className: `vjs-viu-player-list-item vjs-viu-res-item ${
           this.options_.advance.defaultResolution === item ?
             'selected-active' :
             ''
@@ -105,11 +105,11 @@ class ViuResolutionList extends Component {
     // CDN
     const cdnListTitle = super.createEl('div', {
       textContent: this.localize('cdn_title'),
-      className: 'vjs-viu-tools-list-sub-title cdn_sub_title',
+      className: 'vjs-viu-player-list-sub-title cdn_sub_title',
       dir: 'ltr'
     });
     const cdnListWrapper = super.createEl('ui', {
-      className: 'vjs-viu-tools-list',
+      className: 'vjs-viu-player-list',
       dir: 'ltr'
     });
     const cdnList = this.options_.advance.cdnList || [];
@@ -117,7 +117,7 @@ class ViuResolutionList extends Component {
     cdnList.map((item) => {
       const sigleItem = dom.createEl('li', {
         textContent: this.localize(`res_${item}`),
-        className: `vjs-viu-tools-list-item  vjs-viu-res-item vjs-viu-cdn-item ${
+        className: `vjs-viu-player-list-item  vjs-viu-res-item vjs-viu-cdn-item ${
           this.options_.advance.defaultCdn === item ? 'selected-active' : ''
         } ${super.buildCSSClass()}`,
         dir: 'ltr'

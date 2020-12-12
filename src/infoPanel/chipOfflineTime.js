@@ -20,20 +20,21 @@ class ChipOfflineTime extends Component {
   }
   createEl() {
     const root = super.createEl('div', {
-      //   textContent: "121212",
-      className: 'vjs-viu-tools-info-offline-time-span',
+      className: 'vjs-viu-player-info-offline-time-span',
       dir: 'ltr'
     });
     const date = this.options_.offlineTime ?
       dayjs(Number(this.options_.offlineTime * 1000)).format(this.options_.offlineTimeFormat) :
       '';
     const text = dom.createEl('span', {
-      textContent: date,
-      className: `vjs-viu-tools-info-offline-time ${super.buildCSSClass()}`,
+      textContent: `${this.localize('off_shelf_date')}:${date}`,
+      className: `vjs-viu-player-info-offline-time ${super.buildCSSClass()}`,
       dir: 'ltr'
     });
 
-    root.appendChild(text);
+    if (this.options_.offlineTime) {
+      root.appendChild(text);
+    }
 
     return root;
   }

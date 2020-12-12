@@ -1,4 +1,5 @@
 import videojs from 'video.js';
+import dayjs from 'dayjs';
 // import dayjs from 'dayjs';
 const Component = videojs.getComponent('component');
 
@@ -63,11 +64,12 @@ class ViuProcessInfo extends Component {
       className: 'vjs-viu-process-info-desc',
       dir: 'ltr'
     });
-    // const date = this.options_.offlineTime ?
-    //   dayjs(Number(this.options_.offlineTime * 1000)).format(this.options_.offlineTimeFormat) :
-    //   '';
+    const date = this.options_.offlineTime ?
+      dayjs(Number(this.options_.offlineTime * 1000)).format(this.options_.offlineTimeFormat) :
+      '';
+
     const offlineTime = super.createEl('div', {
-      textContent: `${this.localize('off_shelf_date')}`,
+      textContent: `${this.localize('off_shelf_date')}: ${date}`,
       className: 'vjs-viu-process-info-offlinetime',
       dir: 'ltr'
     });

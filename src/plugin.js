@@ -96,7 +96,7 @@ class ViuPlayer extends Plugin {
     };
 
     this.player.ready(() => {
-      this.player.addClass('vjs-viu-tools');
+      this.player.addClass('vjs-viu-player');
 
       if (this.player.getChild('ViuPlayerComponent')) {
         this.player
@@ -112,7 +112,7 @@ class ViuPlayer extends Plugin {
         this.player.getChild('ViuPlayerComponent').viuSubtitle,
         this.player.getChild('ViuPlayerComponent').viuAdvance,
         this.player.getChild('ViuPlayerComponent').viuTopSubtitle,
-        this.player.getChild("ViuPlayerComponent").viuFontSize,
+        this.player.getChild('ViuPlayerComponent').viuFontSize
       ];
       // 处理鼠标点击控制失效问题
 
@@ -720,7 +720,7 @@ class ViuPlayerComponent extends Component {
   }
   createEl() {
     return super.createEl('div', {
-      className: 'vjs-viu-tools-panel',
+      className: 'vjs-viu-player-panel',
       dir: 'ltr'
     });
   }
@@ -733,7 +733,7 @@ ViuPlayerComponent.prototype.options_ = {
     'viuSubtitle',
     'viuAdvance',
     'viuTopSubtitle',
-    "viuFontSize",
+    'viuFontSize'
   ]
 };
 

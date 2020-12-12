@@ -19,12 +19,12 @@ class LangTitle extends Component {
   createEl() {
     const root = super.createEl('div', {
       //   textContent: "121212",
-      className: 'vjs-viu-tools-lang-title-span',
+      className: 'vjs-viu-player-lang-title-span',
       dir: 'ltr'
     });
     const text = dom.createEl('span', {
       textContent: this.localize('setting_language') || '',
-      className: `vjs-viu-tools-lang-title ${super.buildCSSClass()}`,
+      className: `vjs-viu-player-lang-title ${super.buildCSSClass()}`,
       dir: 'ltr'
     });
 

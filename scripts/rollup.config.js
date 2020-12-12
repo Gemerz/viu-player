@@ -1,9 +1,11 @@
 const generate = require('videojs-generate-rollup-config');
 const path = require('path');
 const presetEnv = require('@babel/preset-env');
-
 // see https://github.com/videojs/videojs-generate-rollup-config
 // for options
+// copy({
+//   targets: [{ src: 'src/fonts/*', dest: 'dist/fonts/*' }]
+// })
 const options = {
   babel() {
     return {
@@ -17,13 +19,11 @@ const options = {
             useBuiltIns: 'usage',
             corejs: '3.0.0',
             forceAllTransforms: true,
-            debug: true
+            debug: false
           }
         ]
       ],
-      plugins: [
-        //   transformObjectAssign
-      ]
+      plugins: []
     };
   }
 };

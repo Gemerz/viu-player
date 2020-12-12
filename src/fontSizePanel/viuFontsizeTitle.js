@@ -19,13 +19,13 @@ class SizeTitle extends Component {
   createEl() {
     const root = super.createEl('div', {
       // textContent: "字幕大小",
-      className: 'vjs-viu-tools-size-title-span',
+      className: 'vjs-viu-player-list-title vjs-viu-player-size-title-span',
       dir: 'ltr'
     });
     const text = dom.createEl('span', {
       textContent: '字幕大小',
       //   textContent: this.localize('setting_language') || '',
-      //   className: `vjs-viu-tools-size-title ${super.buildCSSClass()}`,
+      //   className: `vjs-viu-player-size-title ${super.buildCSSClass()}`,
       dir: 'ltr'
     });
 

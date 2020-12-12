@@ -4,7 +4,7 @@
     {
       preload: "auto",
       autoplay: true,
-      fluid: true,
+      fluid: false,
       inactivityTimeout: 0, // 非用户活跃时间间隔,在keydown事件控制非用户活跃
       errorDisplay: true,
       controlBar: false,
@@ -21,8 +21,29 @@
         nativeAudioTracks: false,
         nativeVideoTracks: false,
       },
-      language: "en",
+      language: "zh_cn",
       languages: {
+        zh_cn: {
+          hide_sub: "隐藏",
+          episode_num: "第13集",
+          setting_language: "语言 / Language",
+          off_shelf_date:"下架日期",
+          resolution_title:"源大小",
+          fontsize_s: "小",
+          fontsize_m: "正常",
+          fontsize_l: "大",
+          fontsize_xl:"超大",
+          resolution_hero_title: "高级设置",
+          cdn_title:"CDN线路",
+          res_s1080p:"超清10M",
+          res_s720p:"超清4M",
+          res_s480p:"高清",
+          res_s240p:"清晰",
+          res_url:"Amazon",
+          res_url2:"PCCW HKT",
+          res_url3:"AKimai",
+
+        },
         en: {
           hide_sub: "Close",
           episode_num: "第13集",
@@ -31,17 +52,14 @@
           fontsize_s: "small",
           fontsize_m: "normal",
           fontsize_l: "large",
-          resolution_title:"源大小"
+          resolution_title:"源大小",
+         
         },
         sg_en: {
           hide_sub: "Close",
           episode_num: "EP. 13",
           setting_language: "Language / 语言",
-        },
-        zh_cn: {
-          hide_sub: "隐藏",
-          episode_num: "第13集",
-          setting_language: "语言 / Language",
+          off_shelf_date:"下架日期 : "
         },
         zh_hk: {
           hide_sub: "隱藏",
@@ -76,13 +94,13 @@
     fontSize: ["s", "m", "l", "xl"],
     defaultFontSize: "s",
     info: {
-      chipName: "一些不错的剧集啦！！！",
+      chipName: "生活大爆作 第十三季",
       episode: "12",
-      chipCaptions: "这里是集剧的描述！！！",
-      chipDesc: "xxx",
-      offlineTime: "1595843212",
+      chipCaptions: "谢耳朵与艾米终于有自己的孩子呢...",
+      chipDesc: "谢耳朵与艾米 经历了很多事，终于................ ",
+      offlineTime: "",
       offlineTimeFormat: "YYYY-MM-DD",
-      isMovie: 1,
+      isMovie: 0,
     },
     advance: {
       resolutionList: ["s1080p", "s720p", "s480p", "s240p"],

@@ -9,7 +9,7 @@
       errorDisplay: true,
       controlBar: false,
       loop: true,
-      muted: true,
+      muted: false,
       html5: {
         hls: {
           overrideNative: true,

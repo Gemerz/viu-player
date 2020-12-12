@@ -223,7 +223,7 @@
 .video-js.viu-player
   .vjs-play-control.vjs-paused
   .vjs-icon-placeholder::before {
-  font-size: 45px;
+  font-size: 60px;
 }
 
 .video-js.viu-player
@@ -231,6 +231,14 @@
   button.vjs-info-button
   > .vjs-icon-placeholder:before {
   content: "\e64f";
+  font-family: viufont;
+}
+
+.video-js.viu-player
+  .vjs-viu-player-panel
+  button.vjs-next-chip-button
+  > .vjs-icon-placeholder:before {
+  content: "\e64e";
   font-family: viufont;
 }
 .video-js.viu-player
@@ -272,7 +280,7 @@
   animation-duration: 1.3s;
   animation-timing-function: ease-in-out;
 }
-.vjs-viu-process-info {
+.video-js.viu-player .vjs-viu-process-info {
   width: 100%;
   position: absolute;
   bottom: 310px;
@@ -280,6 +288,13 @@
   right: 0;
   top: initial;
   padding-left: 70px;
+}
+.video-js.viu-player .vjs-viu-process-info .vjs-viu-process-info-desc {
+  font-size: 40px;
+  color: #fff;
+  line-height: 70px;
+  text-shadow: 2px 2px 3px #000;
+  display: inline-block;
 }
 .video-js.viu-player .vjs-viu-process-info .vjs-viu-process-info-title {
   font-size: 40px;
@@ -289,8 +304,17 @@
 }
 .video-js.viu-player .vjs-viu-process-info .vjs-viu-process-info-offlinetime {
   font-size: 20px;
+  text-shadow: 2px 2px 3px #333333;
 }
 
+.video-js.viu-player .vjs-viu-player-info-chipCaptions-span {
+  font-size: 40px;
+  color: #fff;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 20px 0 30px 0;
+}
 /*drawer */
 
 .video-js.viu-player .vjs-viu-player-drawer {
@@ -303,6 +327,10 @@
   background: rgba(53, 53, 53, 0.8);
   box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.36);
   padding: 90px 0 108px 0;
+}
+.video-js.viu-player .vjs-viu-player-info-drawer-container {
+  padding-left: 60px;
+  padding-right: 30px;
 }
 .video-js.viu-player .vjs-viu-player-drawer.active {
   right: 0;
@@ -322,7 +350,7 @@
   color: #fff;
   line-height: 50px;
   letter-spacing: 1px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   text-shadow: 2px 2px 4px #000;
 }
 .video-js.viu-player .vjs-viu-player-info-offline-time {

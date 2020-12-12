@@ -1,0 +1,13 @@
+{
+  "name": "fixture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/videojs-test.cjs.js",
+  "module": "dist/videojs-test.es.js",
+  "scripts": {
+    "verify": "vjsverify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: viuProcessInfo.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: viuProcessInfo.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import videojs from 'video.js';
+// import dayjs from 'dayjs';
+const Component = videojs.getComponent('component');
+
+const defaults = {
+  chipName: '',
+  chipCaptions: '',
+  offlineTime: '',
+  offlineTimeFormat: ''
+};
+/**
+ *  Component ViuProcessInfo
+ *  parent is plugin
+ */
+
+class ViuProcessInfo extends Component {
+  /**
+   * Create a ViuProcessInfo instance.
+   *
+   * @param  {Player} player
+   *         A Video.js Player instance.
+   *
+   * @param  {Object} [options]
+   *         An optional options object.
+   *
+   *         While not a core part of the Video.js component architecture, a
+   *         second argument of options is a convenient way to accept inputs
+   *         from your component's caller.
+   */
+  constructor(player, options) {
+    super(player, options);
+    this.options = videojs.mergeOptions(defaults, options);
+  }
+  /**
+   * function createEl
+   *
+   * @return {Object} return html element
+   */
+  createEl() {
+    const root = super.createEl('div', {
+      className: 'vjs-viu-process-info',
+      dir: 'ltr'
+    });
+    const episodeTitle = super.createEl('div', {
+      textContent: this.options_.chipName || '',
+      className: 'vjs-viu-process-info-title',
+      dir: 'ltr'
+    });
+    const movieTitle = super.createEl('div', {
+      textContent: this.options_.chipName || '',
+      className: 'vjs-viu-process-info-movieTitle',
+      dir: 'ltr'
+    });
+    const userLevel = super.createEl('img', {
+      src: this.options_.pUrl,
+      className: 'vjs-viu-process-info-userLevel',
+      dir: 'ltr'
+    });
+    const episodeDesc = super.createEl('div', {
+      textContent: `${this.localize('episode_num')} ${
+        this.options_.chipCaptions || ''
+      }`,
+      className: 'vjs-viu-process-info-desc',
+      dir: 'ltr'
+    });
+    // const date = this.options_.offlineTime ?
+    //   dayjs(Number(this.options_.offlineTime * 1000)).format(this.options_.offlineTimeFormat) :
+    //   '';
+    const offlineTime = super.createEl('div', {
+      textContent: `${this.localize('off_shelf_date')}`,
+      className: 'vjs-viu-process-info-offlinetime',
+      dir: 'ltr'
+    });
+    // isMovie = 0 电视剧  = 1 电影
+
+    if (this.options_.isMovie === 1) {
+      // P+ 电影
+      // P+ 影片 并且 图片存在  插入 icon
+      if (this.options_.userLevel === 3 &amp;&amp; this.options_.showPremium) {
+        root.appendChild(userLevel);
+        root.appendChild(movieTitle);
+        if (this.options_.offlineTime) {
+          root.appendChild(offlineTime);
+        }
+      } else {
+        // 普通电影
+        root.appendChild(episodeTitle);
+        if (this.options_.offlineTime) {
+          root.appendChild(offlineTime);
+        }
+      }
+    } else if (this.options_.isMovie === 0) {
+      // P+电视剧
+      if (this.options_.userLevel === 3 &amp;&amp; this.options_.showPremium) {
+        root.appendChild(episodeTitle);
+        root.appendChild(userLevel);
+        root.appendChild(episodeDesc);
+        if (this.options_.offlineTime) {
+          root.appendChild(offlineTime);
+        }
+      } else {
+        // 普通电视剧
+        root.appendChild(episodeTitle);
+        root.appendChild(episodeDesc);
+        if (this.options_.offlineTime) {
+          root.appendChild(offlineTime);
+        }
+      }
+    }
+    return root;
+  }
+}
+videojs.registerComponent('viuProcessInfo', ViuProcessInfo);
+
+export default ViuProcessInfo;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ViuAdvanceComponent.html">ViuAdvanceComponent</a></li><li><a href="ViuFontSizeComponent.html">ViuFontSizeComponent</a></li><li><a href="ViuFontSizeList.html">ViuFontSizeList</a></li><li><a href="ViuInfoComponent.html">ViuInfoComponent</a></li><li><a href="ViuNextChip.html">ViuNextChip</a></li><li><a href="ViuPlayer.html">ViuPlayer</a></li><li><a href="ViuProcessInfo.html">ViuProcessInfo</a></li><li><a href="ViuResolutionList.html">ViuResolutionList</a></li><li><a href="ViuSubtitleComponent.html">ViuSubtitleComponent</a></li><li><a href="ViuTopSubtitleComponent.html">ViuTopSubtitleComponent</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.0-dev</a> on Thu Dec 10 2020 17:54:25 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

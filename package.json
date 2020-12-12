@@ -40,7 +40,6 @@
     "watch:js": "npm run build:js -- -w",
     "prepublishOnly": "npm-run-all build test:verify",
     "deploy": "gh-pages -d ."
-    }
   },
   "engines": {
     "node": ">=8",

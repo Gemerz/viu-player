@@ -1,12 +1,14 @@
 @font-face {
   font-family: "viufont"; /* project id 1470295 */
-  src: url("http://at.alicdn.com/t/font_1470295_tm3dnpi9o3.eot");
-  src: url("http://at.alicdn.com/t/font_1470295_tm3dnpi9o3.eot?#iefix")
+  src: url("http://at.alicdn.com/t/font_1470295_etw9aavn2ia.eot");
+  src: url("http://at.alicdn.com/t/font_1470295_etw9aavn2ia.eot?#iefix")
       format("embedded-opentype"),
-    url("http://at.alicdn.com/t/font_1470295_tm3dnpi9o3.woff2") format("woff2"),
-    url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.woff") format("woff"),
-    url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.ttf") format("truetype"),
-    url("//at.alicdn.com/t/font_1470295_tm3dnpi9o3.svg#viufont") format("svg");
+    url("http://at.alicdn.com/t/font_1470295_etw9aavn2ia.woff2") format("woff2"),
+    url("http://at.alicdn.com/t/font_1470295_etw9aavn2ia.woff") format("woff"),
+    url("http://at.alicdn.com/t/font_1470295_etw9aavn2ia.ttf")
+      format("truetype"),
+    url("http://at.alicdn.com/t/font_1470295_etw9aavn2ia.svg#viufont")
+      format("svg");
 }
 @keyframes heartBeat {
   0% {
@@ -43,10 +45,29 @@
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
 }
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
 
 .video-js.viu-player {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 .video-js.viu-player .hidden {
   display: none !important;
@@ -196,9 +217,13 @@
 .video-js.viu-player .vjs-play-control.vjs-paused .vjs-icon-placeholder {
   font-family: VideoJS;
 }
-.video-js.viu-player .vjs-play-control.vjs-playing .vjs-icon-placeholder::before,
-.video-js.viu-player .vjs-play-control.vjs-paused .vjs-icon-placeholder::before{
-    font-size: 45px;
+.video-js.viu-player
+  .vjs-play-control.vjs-playing
+  .vjs-icon-placeholder::before,
+.video-js.viu-player
+  .vjs-play-control.vjs-paused
+  .vjs-icon-placeholder::before {
+  font-size: 45px;
 }
 
 .video-js.viu-player
@@ -230,6 +255,14 @@
   content: "\e653";
   font-family: viufont;
 }
+.video-js.viu-player
+  .vjs-viu-player-panel
+  button.vjs-font-size-button
+  > .vjs-icon-placeholder:before {
+  content: "\e601";
+  font-family: viufont;
+  font-size: 40px;
+}
 
 .video-js.viu-player
   .vjs-viu-player-panel
@@ -239,11 +272,6 @@
   animation-duration: 1.3s;
   animation-timing-function: ease-in-out;
 }
-
-.video-js.viu-player .vjs-viu-player-drawer {
-  display: none;
-}
-
 .vjs-viu-process-info {
   width: 100%;
   position: absolute;
@@ -261,4 +289,130 @@
 }
 .video-js.viu-player .vjs-viu-process-info .vjs-viu-process-info-offlinetime {
   font-size: 20px;
+}
+
+/*drawer */
+
+.video-js.viu-player .vjs-viu-player-drawer {
+  /* display: none; */
+  width: 640px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -640px;
+  background: rgba(53, 53, 53, 0.8);
+  box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.36);
+  padding: 90px 0 108px 0;
+}
+.video-js.viu-player .vjs-viu-player-drawer.active {
+  right: 0;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: fadeInRightBig;
+}
+.video-js.viu-player .vjs-viu-player-drawer:not(.active) {
+  right: -640px;
+}
+
+.video-js.viu-player .vjs-viu-player-info-chip-name,
+.video-js.viu-player .vjs-viu-player-list-title {
+  height: 40px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 50px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  text-shadow: 2px 2px 4px #000;
+}
+.video-js.viu-player .vjs-viu-player-info-offline-time {
+  font-size: 22px;
+  margin: 20px 0 10px;
+  display: block;
+}
+
+.video-js.viu-player .vjs-viu-player-info-chip-desc-span {
+  font-size: 32px;
+  margin-top: 16px;
+  padding-right: 30px;
+  letter-spacing: 1px;
+  line-height: 37px;
+}
+
+.video-js.viu-player .vjs-viu-player-subtitle-drawer {
+  padding-right: 0;
+  padding-left: 0;
+}
+.video-js.viu-player .vjs-viu-player-lang-title-span {
+  padding: 0 0 63px 78px;
+}
+.video-js.viu-player
+  .vjs-viu-player-lang-title-span
+  .vjs-viu-player-lang-title {
+  font-size: 50px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px #000;
+}
+.video-js.viu-player .vjs-viu-player-lang-items li {
+  width: 100%;
+  height: 92px;
+  line-height: 92px;
+  list-style: none;
+  font-size: 32px;
+  padding-left: 78px;
+}
+.video-js.viu-player .vjs-viu-player-lang-items li.lang-active {
+  background: #ffbf00;
+  color: #333;
+  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.31);
+}
+
+.vjs-has-started.vjs-info-drawer-open .vjs-control-bar,
+.vjs-has-started.vjs-info-drawer-open .vjs-viu-player-panel,
+.vjs-info-drawer-open .vjs-control-bar,
+.vjs-info-drawer-open .vjs-viu-player-panel,
+.vjs-has-started.vjs-language-drawer-open .vjs-control-bar,
+.vjs-has-started.vjs-language-drawer-open .vjs-viu-player-panel,
+.vjs-has-started.vjs-language-drawer-open .vjs-control-bar,
+.vjs-has-started.vjs-language-drawer-open .vjs-viu-player-panel,
+.vjs-has-started.vjs-advance-drawer-open .vjs-control-bar,
+.vjs-has-started.vjs-advance-drawer-open .vjs-viu-player-panel,
+.vjs-has-started.vjs-fontsize-drawer-open .vjs-control-bar,
+.vjs-has-started.vjs-fontsize-drawer-open .vjs-viu-player-panel {
+  display: none;
+}
+
+.video-js.viu-player .vjs-viu-player-advance-drawer {
+  padding-right: 0;
+  padding-left: 0;
+}
+.vjs-viu-player-list-title {
+  display: block;
+  padding: 0 0 63px 78px;
+  font-size: 50px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px #000;
+}
+.vjs-viu-player-list-sub-title {
+  font-size: 30px;
+  line-height: 60px;
+  padding-left: 78px;
+  display: block;
+  margin: 20px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+.vjs-viu-player-list {
+  list-style: none;
+  text-decoration: none;
+}
+.vjs-viu-player-list .vjs-viu-player-list-item {
+  font-size: 32px;
+  line-height: 64px;
+  padding-left: 78px;
+}
+.vjs-viu-player-list-item.active {
+  background: #ffbf00;
+  color: #333;
 }

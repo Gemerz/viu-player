@@ -214,7 +214,7 @@
   font-size: 75px;
 }
 .video-js.viu-player .vjs-play-control.vjs-playing .vjs-icon-placeholder,
-.video-js.viu-player .vjs-play-control .vjs-icon-placeholder
+.video-js.viu-player .vjs-play-control.vjs-icon-play .vjs-icon-placeholder
 .video-js.viu-player .vjs-play-control.vjs-paused .vjs-icon-placeholder {
   font-family: VideoJS;
 }

@@ -213,6 +213,9 @@
   line-height: 85px;
   font-size: 75px;
 }
+.video-js.viu-player  .vjs-big-play-button .vjs-icon-placeholder:before, .video-js .vjs-play-control .vjs-icon-placeholder:before, .vjs-icon-play:before{
+  font-family: VideoJS;
+}
 .video-js.viu-player .vjs-play-control.vjs-playing .vjs-icon-placeholder,
 .video-js.viu-player .vjs-play-control.vjs-icon-play .vjs-icon-placeholder,
 .video-js.viu-player .vjs-play-control.vjs-paused .vjs-icon-placeholder {
